@@ -1,7 +1,27 @@
+/**
+ * TwoDimBucketStarterCode
+ * This program finds the maximum area of water that can be contained
+ * between vertical lines in a 2D space.
+ *
+ * @author Sanjana Prasad
+ * @date 2023-09-01
+ */
+
 
 public class TwoDimBucketStarterCode {
 
+    /**
+     * The main method to execute the program
+     *
+     * @param args Command-line arguments (not used)
+     */
+
     public static void main(String[] args) {
+
+    /**
+     * Run a series of test cases to validate the findMaxArea method
+     */ 
+
         int[] heights={1,3,4};
         System.out.println("max height should be 3, and it is " + findMaxArea(heights));
 
@@ -46,6 +66,16 @@ public class TwoDimBucketStarterCode {
 
 
     }
+
+
+    /**
+     * Find the maximum area formed by lines in the array.
+     * Brute-force method used due to author's obsession with coordinates
+     *
+     * @param height An array of integers representing the heights of lines
+     * @return The maximum area that can be formed
+     */
+
 
     public static int findMaxArea(int[] height) {
         int max = 0; // Initialize max area
