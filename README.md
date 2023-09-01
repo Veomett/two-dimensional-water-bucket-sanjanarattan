@@ -7,7 +7,7 @@ After some additional research, I realize that it is not the most efficient meth
 ![image](https://github.com/Veomett/two-dimensional-water-bucket-sanjanarattan/assets/123421542/aa1fdb9e-b76c-4529-b556-936f66cdcaa3)
 
 
-I visualized each value in the array as a coordinate (x1,y1) where each x and y is comparable to one another. \
+I visualized each value in the array as a coordinate (x1,y1) where each x and y is comparable to one another.
 
 The data structure I thought best followed this style was HashMap but I beleive that method is inefficient because you can't store keys and values as ints that can be compared later. (I could be wrong but this is my understanding as of now).
 
