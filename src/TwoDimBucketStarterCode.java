@@ -1,7 +1,13 @@
+
+import java.util.Arrays;
+
+
 public class TwoDimBucketStarterCode {
 
     public static void main(String[] args) {
-        int[] heights = {1, 3, 4};
+        //int[] heights = {1, 3, 4};
+        int[] heights = {3,5,4,8,7};
+
         System.out.println("max height should be 3, and it is " + findMaxArea(heights));
     }
 
@@ -18,11 +24,65 @@ public class TwoDimBucketStarterCode {
      * @return max area that we can "fill with water" using two of those vertical lines
      */
     public static int findMaxArea(int[] height) {
-        int max=0;
+        int max=0; //areaMax
+        int currMax=0; // current max value
+        int minY;
+
+        for(int i=0;i<height.length;i++){
+            int[] comboArray1 = new int[]{i, height[i]};
+            System.out.println("combo1 is"+(Arrays.toString(comboArray1)));
+            for (int j=i+1;j<height.length;j++){
+                int[] comboArray2 = new int[]{j, height[j]};
+                System.out.println("combo2 is"+(Arrays.toString( comboArray2)));
+
+                if(height[j]<height[i] || height[j]==height[i]){
+                    minY=height[j];
+                }else{
+                    minY=height[i];
+                }
+                    currMax= minY*(Math.abs(i-j));
+                    System.out.println(currMax);
+                    if (currMax>max){
+                        max=currMax;
+                    }
+
+                }
+
+
+            }
+        
+        
+        
+        
+        
+        
+        
+        /*Map<Integer,Integer> coordMap= new HashMap<Integer,Integer>();  //declare hashmap
+
+        for (int i=0; i<height.length;i++){                             //intialize a map of x-y coordinates
+            coordMap.put(i, height[i]);
+        }
+
+        for (Integer j : coordMap.keySet()) {
+            int yVal= coordMap.get(j);
+            System.out.println(j + "," + yVal);
+
+        }8*/
+
+
 
         /***
          * You Code goes here!
          */
+
+
+        /*for (int i=0;i<height.length;i++){      //index of array aka x value
+            for (int j=0;j<i;j++){              //
+
+            }
+            }
+
+        }*/
 
         return max;
     }
